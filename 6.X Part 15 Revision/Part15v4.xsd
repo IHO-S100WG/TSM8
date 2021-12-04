@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://www.iho.int/s100/se" elementFormDefault="qualified"
+  xmlns="http://www.iho.int/s100/se" xmlns:xs="http://www.w3.org/2001/XMLSchema"
+  version="4.0.0-20210621">
+
+
+  <xs:complexType name="PermitType">
+    <xs:sequence>
+      <xs:element name="header" type="PermitHeaderType"/>
+      <xs:element name="products" type="ProductsPermitType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="PermitHeaderType">
+    <xs:sequence>
+      <xs:element name="issueDate" type="xs:date"/>
+      <xs:element name="dataServerName" type="xs:string"/>
+      <xs:element name="dataServerIdentifier" type="xs:string"/>
+      <xs:element name="version" type="xs:string"/>
+      <xs:element name="userpermit" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DatasetPermitType">
+    <xs:sequence>
+      <xs:element name="filename" type="xs:string"/>
+      <xs:element name="editionNumber" type="xs:integer" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>One of either editionNumber or issueDate must be defined in the permit.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="issueDate" type="xs:date"/>
+      <xs:element name="expiry" type="xs:date" minOccurs="0"/>
+      <xs:element name="encryptedKey" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ProductsPermitType">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="product">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="datasetPermit" type="DatasetPermitType"/>
+          </xs:sequence>
+          <xs:attribute name="id"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="permit" type="PermitType">
+    <xs:annotation>
+      <xs:documentation>The root element of the permit file.</xs:documentation>
+    </xs:annotation>
+  </xs:element>
+
+
+  <!-- CERTIFICATE TYPES -->
+  <!-- A SINGLE CERTIFICATE -->
+  <xs:complexType name="CertificateType">
+    <xs:annotation>
+      <xs:documentation>for embedding in files that contains signatures e.g exchange set catalogues or standalone signature file.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="issuer" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <!-- A CONTAINER FOR CERTIFICATES -->
+  <xs:complexType name="CertificateContainerType">
+    <xs:sequence>
+      <xs:element name="schemeAdministrator">
+        <xs:complexType>
+          <xs:attribute name="id" type="xs:string" use="required">
+            <xs:annotation>
+              <xs:documentation>If this id is used as a reference it refers to the scheme administrator certificate which is not included here</xs:documentation>
+            </xs:annotation>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="certificate" type="CertificateType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- SIGNATURE TYPES -->
+  <!-- TYPE FOR A SINGLE SIGNATURE -->
+  <xs:complexType name="DigitalSignature">
+    <xs:annotation>
+      <xs:documentation>
+        Type contains the signature value, an identifier and a reference to the certificate that contains the public key.
+        The value is an base64 encoded ASN.1
+        Dss-Sig-Value  ::=  SEQUENCE  {
+        r       INTEGER,
+        s       INTEGER  }
+      </xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:attribute name="id" type="xs:string" use="required"/>
+        <xs:attribute name="certificateRef" type="xs:string" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="StandaloneDigitalSignature">
+    <xs:annotation>
+      <xs:documentation>A type that contains the signature plus certificates for a single file.</xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="filename" type="xs:string"/>
+      <xs:element name="certificates" type="CertificateContainerType"/>
+      <xs:element name="digitalSignature" type="DigitalSignature"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="standaloneDigitalSignature" type="StandaloneDigitalSignature">
+    <xs:annotation>
+      <xs:documentation>The root elements for CATALOG.SIGN or PERMIT.SIGN</xs:documentation>
+    </xs:annotation>
+    <xs:key name="CertificateKey" xmlns:se="http://www.iho.int/s100/se">
+      <xs:selector xpath="se:certificates/se:certificate | se:certificates/se:schemeAdministrator"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+    <xs:keyref name="CertificateKeyref" refer="CertificateKey" xmlns:se="http://www.iho.int/s100/se">
+      <xs:selector xpath="se:certificates/se:certificate"/>
+      <xs:field xpath="@issuer"/>
+    </xs:keyref>
+    <xs:keyref name="SignatureKeyref" refer="CertificateKey" xmlns:se="http://www.iho.int/s100/se">
+      <xs:selector xpath="se:digitalSignature"/>
+      <xs:field xpath="@certificateRef"/>
+    </xs:keyref>
+  </xs:element>
+
+  <!-- EXTENSION FOR SIGNATURES ON SIGNATURES -->
+  <xs:complexType name="SignatureOnSignature">
+    <xs:complexContent>
+      <xs:extension base="DigitalSignature">
+        <xs:attribute name="signatureRef" type="xs:string"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:simpleType name="DataStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Unencrypted"/>
+      <xs:enumeration value="Compressed"/>
+      <xs:enumeration value="Encrypted"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <!-- EXTENSION FOR SIGNATURES ON OTHER FORMS OF THE FILE (USUALLY UNENCRYPTED VERSION) -->
+  <xs:complexType name="SignatureOnData">
+    <xs:complexContent>
+      <xs:extension base="DigitalSignature">
+        <xs:attribute name="dataStatus" type="DataStatus"/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <!-- TYPE FOR ADDITIONAL SIGNATURES -->
+  <xs:complexType name="AdditionalSignature">
+    <xs:annotation>
+      <xs:documentation>Elements of this type can be used within the dataset discovery metadata elements of an exchanges set catalogue.</xs:documentation>
+    </xs:annotation>
+    <xs:choice>
+      <xs:element name="signatureOnSignature" type="SignatureOnSignature"/>
+      <xs:element name="signatureOnData" type="SignatureOnData"/>
+    </xs:choice>
+  </xs:complexType>
+
+</xs:schema>
