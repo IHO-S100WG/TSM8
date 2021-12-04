@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S100XC:ExchangeSet xmlns:S100CE="http://www.iho.int/s100/se"
+ xmlns:S100XC="http://www.iho.int/s100/xc"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.iho.int/s100/xc file:/C:/Users/kusal/Documents/UKHO_Part15/schemas/S100/4.0.0/S100DP/20210621/CATALOG.xsd">
+    <S100XC:certificates>
+        <S100CE:schemeAdministrator id="root"/>
+        <S100CE:certificate id="iic" issuer="ic-enc">
+            ZGVmYXVsdA==
+        </S100CE:certificate>
+        <S100CE:certificate id="primar" issuer="root">
+            ZGVmYXVsdA==
+        </S100CE:certificate>
+        <S100CE:certificate id="ic-enc" issuer="root">
+            ZGVmYXVsdA==
+        </S100CE:certificate>
+        <S100CE:certificate id="UK" issuer="root">
+            ZGVmYXVsdA==
+        </S100CE:certificate>
+    </S100XC:certificates>
+    <S100XC:datasetFile>
+        <S100XC:filename>GB400797.000</S100XC:filename>
+        <S100XC:signature id="s1" certificateRef="UK" dataStatus="Unencrypted">ZGVmYXVsdA==</S100XC:signature>
+        <S100XC:additionalSignature>
+            <S100CE:signatureOnData id="s2" certificateRef="ic-enc" dataStatus="Encrypted">ZGVmYXVsdA==</S100CE:signatureOnData>
+        </S100XC:additionalSignature>
+        <S100XC:additionalSignature>
+            <S100CE:signatureOnSignature id="s3" certificateRef="iic" signatureRef="s2"></S100CE:signatureOnSignature>
+        </S100XC:additionalSignature>
+    </S100XC:datasetFile>
+</S100XC:ExchangeSet>
