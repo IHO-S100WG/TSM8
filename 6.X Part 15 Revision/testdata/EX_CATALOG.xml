@@ -2,7 +2,7 @@
 <S100XC:ExchangeSet xmlns:S100CE="http://www.iho.int/s100/se"
  xmlns:S100XC="http://www.iho.int/s100/xc"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
- xsi:schemaLocation="http://www.iho.int/s100/xc file:/C:/Users/kusal/Documents/UKHO_Part15/schemas/S100/4.0.0/S100DP/20210621/CATALOG.xsd">
+ xsi:schemaLocation="http://www.iho.int/s100/xc file:./CATALOG.xsd">
     <S100XC:certificates>
         <S100CE:schemeAdministrator id="root"/>
         <S100CE:certificate id="iic" issuer="ic-enc">
