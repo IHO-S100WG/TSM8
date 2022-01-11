@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S100XC:ExchangeCatalogue xmlns:S100SE="http://www.iho.int/s100/se/5.0"
+ xmlns:S100XC="http://www.iho.int/s100/xc/5.0"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:schemaLocation="http://www.iho.int/s100/xc/5.0 file:./CATALOG.xsd">
+    <S100XC:certificates>
+        <S100SE:schemeAdministrator id="root"/>
+        <S100SE:certificate id="iic" issuer="ic-enc">
+            ZGVmYXVsdA==
+        </S100SE:certificate>
+        <S100SE:certificate id="primar" issuer="root">
+            ZGVmYXVsdA==
+        </S100SE:certificate>
+        <S100SE:certificate id="ic-enc" issuer="root">
+            ZGVmYXVsdA==
+        </S100SE:certificate>
+        <S100SE:certificate id="UK" issuer="root">
+            ZGVmYXVsdA==
+        </S100SE:certificate>
+        <S100SE:certificate id="US00" issuer="root">
+            ZGVmYXVsdA==
+        </S100SE:certificate>
+    </S100XC:certificates>
+
+    <S100XC:datasetDiscoveryMetadata>
+        <S100XC:DatasetDiscoveryMetadataStub>
+            <S100XC:fileName>101US00ABCD1234.000</S100XC:fileName>
+            <S100XC:signature id="s1" certificateRef="US00" dataStatus="unencrypted">ZGVmYXVsdA==</S100XC:signature>
+        </S100XC:DatasetDiscoveryMetadataStub>
+        <S100XC:DatasetDiscoveryMetadataStub>
+            <S100XC:fileName>101US00ABCD5678.000</S100XC:fileName>
+            <S100XC:signature id="s1" certificateRef="US00" dataStatus="unencrypted">ZGVmYXVsdA==</S100XC:signature>
+            <S100XC:additionalSignature>
+                <S100SE:signatureOnData id="s2" certificateRef="ic-enc" dataStatus="encrypted">ZGVmYXVsdA==</S100SE:signatureOnData>
+            </S100XC:additionalSignature>
+            <S100XC:additionalSignature>
+                <S100SE:signatureOnSignature id="s3" certificateRef="iic" signatureRef="s2"/>
+            </S100XC:additionalSignature>
+        </S100XC:DatasetDiscoveryMetadataStub>
+    </S100XC:datasetDiscoveryMetadata>
+
+    <S100XC:supportFileDiscoveryMetadata>
+        <!-- discovery blocks for support files -->
+    </S100XC:supportFileDiscoveryMetadata>
+
+    <S100XC:catalogueDiscoveryMetadata>
+        <!-- discovery blocks for catalogues -->
+    </S100XC:catalogueDiscoveryMetadata>
+</S100XC:ExchangeCatalogue>

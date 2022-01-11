@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    xmlns:S100SE="http://www.iho.int/s100/se/5.0" targetNamespace="http://www.iho.int/s100/xc/5.0"
+    xmlns:S100XC="http://www.iho.int/s100/xc/5.0">
+
+    <xs:import namespace="http://www.iho.int/s100/se/5.0" schemaLocation="Part15.xsd"/>
+    <xs:element name="ExchangeCatalogue" type="S100XC:ExchangeCatalogueType">
+        <xs:annotation>
+            <xs:documentation>Example - this is actually S-100 Exchange Catalogue schema implementation of the various Part 15 parts...</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="DiscoveryMetadataStubType">
+        <xs:sequence>
+            <xs:element name="fileName" type="xs:string"/>
+            <xs:element name="signature" type="S100SE:S100_SE_SignatureOnData"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="additionalSignature"
+                type="S100SE:S100_SE_AdditionalSignature"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="ExchangeCatalogueType">
+        <xs:sequence>
+            <xs:element name="certificates" type="S100SE:S100_SE_CertificateContainerType"/>
+            <xs:element name="datasetDiscoveryMetadata">
+                <xs:complexType>
+                <xs:sequence>
+                <xs:element name="DatasetDiscoveryMetadataStub" type="S100XC:DiscoveryMetadataStubType" minOccurs="0" maxOccurs="unbounded"/>
+                </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="supportFileDiscoveryMetadata">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="SupportFileDiscoveryMetadataStub" type="S100XC:DiscoveryMetadataStubType" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="catalogueDiscoveryMetadata">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="CatalogueDiscoveryMetadataStub" type="S100XC:DiscoveryMetadataStubType" minOccurs="0" maxOccurs="unbounded"/>
+                        </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
