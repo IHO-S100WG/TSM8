@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<S100_TranslationFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="../../S100FC/20180611/language_pack.xsd"
+ xmlns:S100FC="http://www.iho.int/S100FC" language="fre">
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_FeatureTypes/S100_FC_FeatureType[./name/text()='Pizza']/definition</path>
+        <original></original>
+        <translation>Un pizza est un chose qe jaime manger beaucoup</translation>
+        <status>changed</status>
+    </S100_TranslationItem>
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_FeatureTypes/S100_FC_FeatureType/name[./text()='Pizza']</path>
+        <translation>Le Pizza</translation>
+        <status></status>
+    </S100_TranslationItem>
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_SimpleAttributes/S100_FC_SimpleAttribute[./name/text()='categoryOfTopping']/listedValues/listedValue[./label/text()='Cheese']/definition</path>
+        <translation>d'habitude un bon mozarella</translation>
+        <status></status>
+    </S100_TranslationItem>
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_SimpleAttributes/S100_FC_SimpleAttribute[./name/text()='categoryOfTopping']/listedValues/listedValue/label[./text()='Cheese']</path>
+        <translation>Fromage</translation>
+        <status></status>
+    </S100_TranslationItem>
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_SimpleAttributes/S100_FC_SimpleAttribute[./name/text()='categoryOfTopping']/definition</path>
+        <translation>Type De Garniture</translation>
+        <status></status>
+    </S100_TranslationItem>
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_SimpleAttributes/S100_FC_SimpleAttribute/name[./text()='categoryOfTopping']</path>
+        <translation>Garniture</translation>
+        <status></status>
+    </S100_TranslationItem>
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_SimpleAttributes/S100_FC_SimpleAttribute[./code/text()='size']/definition</path>
+        <translation>Le dimension du pizza, en centimetres par example</translation>
+        <status></status>
+    </S100_TranslationItem>
+    <S100_TranslationItem>
+        <path>/S100_FC_FeatureCatalogue/S100_FC_SimpleAttributes/S100_FC_SimpleAttribute[./code/text()='size']/name</path>
+        <translation>Taille</translation>
+        <status></status>
+    </S100_TranslationItem>
+</S100_TranslationFile>

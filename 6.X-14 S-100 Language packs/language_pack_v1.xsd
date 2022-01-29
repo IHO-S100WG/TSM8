@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <xs:complexType name="TranslationFile">
+        <xs:sequence>
+            <xs:element maxOccurs="unbounded" name="S100_TranslationItem" type="TranslationItemType"
+            />
+        </xs:sequence>
+        <xs:attribute name="language" type="xs:string"/>
+    </xs:complexType>
+    <xs:complexType name="TranslationItemType">
+        <xs:sequence>
+            <xs:element name="path" type="xs:string"/>
+            <xs:element name="original" type="xs:string" minOccurs="0"/>
+            <xs:element name="translation" type="xs:string"/>
+            <xs:element name="status" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="S100_TranslationFile" type="TranslationFile"/>
+</xs:schema>

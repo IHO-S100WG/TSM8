@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<S100FC:S100_FC_FeatureCatalogue xmlns:S100Base="http://www.iho.int/S100Base" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:S100CI="http://www.iho.int/S100CI" xmlns:S100FD="http://www.iho.int/S100FD" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:S100FC="http://www.iho.int/S100FC">
+    <S100FC:name>Pizza Feature Catalogue</S100FC:name>
+    <S100FC:scope>global</S100FC:scope>
+    <S100FC:fieldOfApplication>none</S100FC:fieldOfApplication>
+    <S100FC:versionNumber>1.0</S100FC:versionNumber>
+    <S100FC:versionDate>2020-11-23Z</S100FC:versionDate>
+    <S100FC:producer>
+        <S100CI:role>author</S100CI:role>
+        <S100CI:party>
+            <S100CI:CI_Organisation>
+                <S100CI:name>IIC</S100CI:name>
+                <S100CI:contactInfo>
+                    <S100CI:address>
+                        <S100CI:city>Frome</S100CI:city>
+                        <S100CI:administrativeArea>Somerset</S100CI:administrativeArea>
+                        <S100CI:country>UK</S100CI:country>
+                        <S100CI:electronicMailAddress>jonathan.pritchard@iictechnologies.com</S100CI:electronicMailAddress>
+                    </S100CI:address>
+                    <S100CI:onlineResource>
+                        <S100CI:linkage>www.iictechnologies.com</S100CI:linkage>
+                    </S100CI:onlineResource>
+                </S100CI:contactInfo>
+            </S100CI:CI_Organisation>
+        </S100CI:party>
+    </S100FC:producer>
+    <S100FC:classification>unclassified</S100FC:classification>
+    <S100FC:S100_FC_SimpleAttributes>
+        <S100FC:S100_FC_SimpleAttribute>
+            <S100FC:name>categoryOfTopping</S100FC:name>
+            <S100FC:definition>Topping on a pizza (a maximum of four)</S100FC:definition>
+            <S100FC:code>categoryOfTopping</S100FC:code>
+            <S100FC:alias></S100FC:alias>
+            <S100FC:valueType>enumeration</S100FC:valueType>
+            <S100FC:listedValues>
+                <S100FC:listedValue>
+                    <S100FC:label>Cheese</S100FC:label>
+                    <S100FC:definition>Usually a nice mozarella</S100FC:definition>
+                    <S100FC:code>1</S100FC:code>
+                </S100FC:listedValue>
+                <S100FC:listedValue>
+                    <S100FC:label>Tomato</S100FC:label>
+                    <S100FC:definition>a tomato puree</S100FC:definition>
+                    <S100FC:code>2</S100FC:code>
+                </S100FC:listedValue>
+                <S100FC:listedValue>
+                    <S100FC:label>Ham</S100FC:label>
+                    <S100FC:definition>made from pigs. boiled.</S100FC:definition>
+                    <S100FC:code>3</S100FC:code>
+                </S100FC:listedValue>
+                <S100FC:listedValue>
+                    <S100FC:label>Pineapple</S100FC:label>
+                    <S100FC:definition>yuk</S100FC:definition>
+                    <S100FC:code>4</S100FC:code>
+                </S100FC:listedValue>
+            </S100FC:listedValues>
+        </S100FC:S100_FC_SimpleAttribute>
+        <S100FC:S100_FC_SimpleAttribute>
+            <S100FC:name>Size</S100FC:name>
+            <S100FC:definition>Size of the pizza (diameter), in inches.</S100FC:definition>
+            <S100FC:code>size</S100FC:code>
+            <S100FC:alias></S100FC:alias>
+            <S100FC:valueType>real</S100FC:valueType>
+        </S100FC:S100_FC_SimpleAttribute>
+        <S100FC:S100_FC_SimpleAttribute>
+            <S100FC:name>Base</S100FC:name>
+            <S100FC:definition>The base of the pizza.</S100FC:definition>
+            <S100FC:code>base</S100FC:code>
+            <S100FC:alias></S100FC:alias>
+            <S100FC:valueType>text</S100FC:valueType>
+        </S100FC:S100_FC_SimpleAttribute>
+    </S100FC:S100_FC_SimpleAttributes>
+    <S100FC:S100_FC_ComplexAttributes/>
+    <S100FC:S100_FC_InformationTypes/>
+    <S100FC:S100_FC_FeatureTypes>
+        <S100FC:S100_FC_FeatureType isAbstract="false">
+            <S100FC:name>Pizza</S100FC:name>
+            <S100FC:definition>Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven. A small pizza is sometimes called a pizzetta. A person who makes pizza is known as a pizzaiolo. In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced, and is eaten with the use of a knife and fork.[2][3] In casual settings, however, it is cut into wedges to be eaten while held in the hand. The term pizza was first recorded in the 10th century in a Latin manuscript from the Southern Italian town of Gaeta in Lazio, on the border with Campania. Modern pizza was invented in Naples, and the dish and its variants have since become popular in many countries.[5] It has become one of the most popular foods in the world and a common fast food item in Europe, North America and Australasia; available at pizzerias (restaurants specializing in pizza, restaurants offering Mediterranean cuisine, via pizza delivery, and as street food.[5] Various food companies sell ready-baked pizzas, which may be frozen, in grocery stores, to be reheated in a home oven. In 2017, the world pizza market was US$128 billion, and in the US it was $44 billion spread over 76,000 pizzerias. Overall, 13% of the U.S. population aged 2 years and over consumed pizza on any given day. The Associazione Verace Pizza Napoletana (lit. True Neapolitan Pizza Association) is a non-profit organization founded in 1984 with headquarters in Naples that aims to promote traditional Neapolitan pizza. In 2009, upon Italy's request, Neapolitan pizza was registered with the European Union as a Traditional Speciality Guaranteed dish, and in 2017 the art of its making was included on UNESCO's list of intangible cultural heritage.</S100FC:definition>
+            <S100FC:code>pizza</S100FC:code>
+            <S100FC:alias></S100FC:alias>
+            <S100FC:attributeBinding>
+                <S100FC:multiplicity>
+                    <S100Base:lower>1</S100Base:lower>
+                    <S100Base:upper infinite="false">1</S100Base:upper>
+                </S100FC:multiplicity>
+                <S100FC:attribute ref="size"/>
+            </S100FC:attributeBinding>
+            <S100FC:attributeBinding>
+                <S100FC:multiplicity>
+                    <S100Base:lower>1</S100Base:lower>
+                    <S100Base:upper infinite="false">1</S100Base:upper>
+                </S100FC:multiplicity>
+                <S100FC:attribute ref="base"/>
+            </S100FC:attributeBinding>
+            <S100FC:attributeBinding>
+                <S100FC:multiplicity>
+                    <S100Base:lower>0</S100Base:lower>
+                    <S100Base:upper xsi:nil="true"/>
+                </S100FC:multiplicity>
+                <S100FC:attribute ref="categoryOfTopping"/>
+            </S100FC:attributeBinding>
+            <S100FC:featureUseType>geographic</S100FC:featureUseType>
+            <S100FC:permittedPrimitives>surface</S100FC:permittedPrimitives>
+        </S100FC:S100_FC_FeatureType>
+    </S100FC:S100_FC_FeatureTypes>
+</S100FC:S100_FC_FeatureCatalogue>
