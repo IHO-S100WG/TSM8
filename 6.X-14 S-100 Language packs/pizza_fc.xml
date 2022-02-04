@@ -33,22 +33,22 @@
       <S100FC:listedValues>
         <S100FC:listedValue>
           <S100FC:label>Cheese</S100FC:label>
-          <S100FC:definition>Usually a nice mozarella</S100FC:definition>
+          <S100FC:definition>Usually a nice mozarella.</S100FC:definition>
           <S100FC:code>1</S100FC:code>
         </S100FC:listedValue>
         <S100FC:listedValue>
           <S100FC:label>Tomato</S100FC:label>
-          <S100FC:definition>a tomato puree</S100FC:definition>
+          <S100FC:definition>A tomato puree.</S100FC:definition>
           <S100FC:code>2</S100FC:code>
         </S100FC:listedValue>
         <S100FC:listedValue>
           <S100FC:label>Ham</S100FC:label>
-          <S100FC:definition>made from pigs. boiled.</S100FC:definition>
+          <S100FC:definition>Made from pigs. Boiled.</S100FC:definition>
           <S100FC:code>3</S100FC:code>
         </S100FC:listedValue>
         <S100FC:listedValue>
           <S100FC:label>Pineapple</S100FC:label>
-          <S100FC:definition>yuk</S100FC:definition>
+          <S100FC:definition>Tropical fruit. Some people say it should not be on a pizza.</S100FC:definition>
           <S100FC:code>4</S100FC:code>
         </S100FC:listedValue>
       </S100FC:listedValues>

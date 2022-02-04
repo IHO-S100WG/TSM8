@@ -39,6 +39,54 @@
       <S100LA:translation></S100LA:translation>
     </S100LA:translationItem>
     <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='1']/S100FC:label</path>
+      <S100LA:original>Cheese</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='1']/S100FC:definition</path>
+      <S100LA:original>Usually a nice mozarella.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='2']/S100FC:label</path>
+      <S100LA:original>Tomato</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='2']/S100FC:definition</path>
+      <S100LA:original>A tomato puree.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='3']/S100FC:label</path>
+      <S100LA:original>Ham</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='3']/S100FC:definition</path>
+      <S100LA:original>Made from pigs. Boiled.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='4']/S100FC:label</path>
+      <S100LA:original>Pineapple</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='4']/S100FC:definition</path>
+      <S100LA:original>Tropical fruit. Some people say it should not be on a pizza.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
       <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='size']/S100FC:name</S100LA:path>
       <S100LA:original>Size</S100LA:original>
       <S100LA:status>New</S100LA:status>
