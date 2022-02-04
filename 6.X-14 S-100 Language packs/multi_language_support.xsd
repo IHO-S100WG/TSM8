@@ -96,7 +96,7 @@
     <xs:sequence>
       <xs:element name="fileName" type="xs:anyURI"/>
       <xs:choice minOccurs="0">
-        <xs:element name="identification" type="FileIdentification">
+        <xs:element name="identification" type="FileIdentification" maxOccurs="unbounded">
           <xs:annotation>
             <xs:documentation>Identification by an element or attribute in the source file.</xs:documentation>
           </xs:annotation>
