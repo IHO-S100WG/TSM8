@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<S100LA:translationPackage xmlns:S100LA="http://www.iho.int/s100/la" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0">
+  <S100LA:language>
+    <S100LA:languageCode codeList="codeListLocation#S100_MD_LanguageCode" codeListValue="deu">deu</S100LA:languageCode>
+  </S100LA:language>
+  <S100LA:issueDate>2022-01-27</S100LA:issueDate>
+  <S100LA:producer>
+    <cit:CI_Responsibility>
+      <cit:role>
+        <cit:CI_RoleCode codeList="codeListLocation#CI_RoleCode" codeListValue="custodian">custodian</cit:CI_RoleCode>
+      </cit:role>
+      <cit:party>
+        <cit:CI_Individual>
+          <cit:name>
+            <gco:CharacterString>Max Mustermann</gco:CharacterString>
+          </cit:name>
+        </cit:CI_Individual>
+      </cit:party>
+    </cit:CI_Responsibility>
+  </S100LA:producer>
+  <S100LA:sourceFile>
+    <S100LA:header>
+      <S100LA:fileName>pizza_fc.xml</S100LA:fileName>
+      <S100LA:identification>
+        <S100LA:path>>/S100FC:S100_FC_FeatureCatalogue/S100FC:versionNumber/</S100LA:path>
+        <S100LA:value>1.0.0</S100LA:value>
+      </S100LA:identification>
+    </S100LA:header>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:name</S100LA:path>
+      <S100LA:original>Category of Topping</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:definition</S100LA:path>
+      <S100LA:original>Topping on a pizza (a maximum of four)</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='1']/S100FC:label</path>
+      <S100LA:original>Cheese</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='1']/S100FC:definition</path>
+      <S100LA:original>Usually a nice mozarella.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='2']/S100FC:label</path>
+      <S100LA:original>Tomato</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='2']/S100FC:definition</path>
+      <S100LA:original>A tomato puree.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='3']/S100FC:label</path>
+      <S100LA:original>Ham</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='3']/S100FC:definition</path>
+      <S100LA:original>Made from pigs. Boiled.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='4']/S100FC:label</path>
+      <S100LA:original>Pineapple</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='categoryOfTopping']/S100FC:listedValues/S100FC:listedValue[./S100FC:code/text()='4']/S100FC:definition</path>
+      <S100LA:original>Tropical fruit. Some people say it should not be on a pizza.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='size']/S100FC:name</S100LA:path>
+      <S100LA:original>Size</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='size']/S100FC:definition</S100LA:path>
+      <S100LA:original>Size of the pizza (diameter), in centimeter.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='name']/S100FC:name</S100LA:path>
+      <S100LA:original>Name</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_SimpleAttributes/S100FC:S100_FC_SimpleAttribute[./S100FC:code/text()='name']/S100FC:definition</S100LA:path>
+      <S100LA:original>The name of the pizza.</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_FeatureTypes/S100FC:S100_FC_FeatureType[./S100FC:code/text()='pizza']/S100FC:name</S100LA:path>
+      <S100LA:original>Pizza</S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+    <S100LA:translationItem>
+      <S100LA:path>/S100FC:S100_FC_FeatureCatalogue/S100FC:S100_FC_FeatureTypes/S100FC:S100_FC_FeatureType[./S100FC:code/text()='pizza']/S100FC:definition</S100LA:path>
+      <S100LA:original>
+        Pizza is a dish of Italian origin consisting of a usually round, flat base of leavened wheat-based dough topped with tomatoes, cheese, and often various other ingredients (such as anchovies, mushrooms, onions, olives, pineapple, meat, etc.), which is then baked at a high temperature, traditionally in a wood-fired oven.
+      </S100LA:original>
+      <S100LA:status>New</S100LA:status>
+      <S100LA:translation></S100LA:translation>
+    </S100LA:translationItem>
+  </S100LA:sourceFile>
+</S100LA:translationPackage>
