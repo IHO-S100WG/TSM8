@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
-	xmlns="http://www.iho.int/s100/la"
+	xmlns="http://www.iho.int/S100/la"
   xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0"
   xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0"
-  targetNamespace="http://www.iho.int/s100/la"
+  targetNamespace="http://www.iho.int/S100/la"
   elementFormDefault="qualified"
   attributeFormDefault="unqualified"
   version="0.0.1-20220127">
@@ -45,7 +45,7 @@
 
   <xs:complexType name="TranslationItemType">
     <xs:annotation>
-      <xs:documentation>One item to be translated. This will be a uniquely identifyable element or attribute in a source (XML) file</xs:documentation>
+      <xs:documentation>One item to be translated. This will be a uniquely identifiable element or attribute in a source (XML) file</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="path" type="xs:string">
@@ -98,7 +98,7 @@
       <xs:choice minOccurs="0">
         <xs:element name="identification" type="FileIdentification" maxOccurs="unbounded">
           <xs:annotation>
-            <xs:documentation>Identification by an element or attribute in the source file.</xs:documentation>
+            <xs:documentation>Identification by one or more elements or attributes in the source file.</xs:documentation>
           </xs:annotation>
         </xs:element>
         <xs:element name="sha1Hash" type="xs:hexBinary">
@@ -130,7 +130,7 @@
       </xs:element>
       <xs:element name="issueDate" type="xs:date"/>
       <xs:element name="issueTime" type="xs:time" minOccurs="0"/>
-      <xs:element name="producer" type="cit:CI_Responsibility_PropertyType" minOccurs="0"/>
+      <xs:element name="responsibleParty" type="cit:CI_Responsibility_PropertyType" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="sourceFile" type="SourceFileType" maxOccurs="unbounded">
         <xs:annotation>
           <xs:documentation>The list of source files for that this translation file provides translations.</xs:documentation>
