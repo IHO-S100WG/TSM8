@@ -7,7 +7,42 @@
   targetNamespace="http://www.iho.int/S100/la"
   elementFormDefault="qualified"
   attributeFormDefault="unqualified"
-  version="0.0.1-20220127">
+  version="1.0.0-20220217">
+
+  <!-- =========================================================================== -->
+  <!-- XML Schema for S-100 Edition 5.0.0 translation packages. 								   -->
+  <!-- =========================================================================== -->
+  <!--
+© Copyright 2022 ... (Draft - Copyright statement tbd)
+Prepared under contract for Canadian Coast Guard and the IHO
+
+License (Draft)
+Certain parts of this document refer to or are based on the standards, documents, schemas, or other material
+of the International Organization for Standardization (ISO), International
+Hydrographic Organization / Organisation Hydrographique Internationale (IHO/OHI).
+The ISO material can be obtained from any ISO member and from the Web site of the ISO Central Secretariat
+at www.iso.org.
+The IHO material can be obtained from the IHO Web site at www.iho.int or from the International Hydrographic
+Bureau.
+
+Permission to copy and distribute this document is hereby granted provided that this notice is retained
+on all copies, and that IHO, Canadian Coast Guard & SevenCs GmbH are credited when the material is redistributed or used in
+part or whole in derivative works.
+Redistributions in binary form must reproduce this notice in the documentation and/or other materials
+provided with the distribution.
+
+Disclaimer
+This work is provided by the copyright holders and contributors "as is" and any express or implied warranties,
+including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose
+are disclaimed. In no event shall the copyright owner or contributors be liable for any direct, indirect,
+incidental, special, exemplary, or consequential damages (including, but not limited to, procurement of substitute
+goods or services; loss of use, data, or profits; or business interruption) however caused and on any theory of
+liability, whether in contract, strict liability, or tort (including negligence or otherwise) arising in any way
+out of the use of this software, even if advised of the possibility of such damage.
+
+Document history
+Version 1.0.0	2022-02-17	Holger Bothien (SevenCs) for Canadian Coast Guard / IIC Technologies / IHO
+	-->
 
   <xs:simpleType name="Status">
     <xs:annotation>
@@ -71,9 +106,9 @@
     </xs:sequence>
   </xs:complexType>
 
-  <xs:complexType name="FileIdentification">
+  <xs:complexType name="ResourceIdentification">
     <xs:annotation>
-      <xs:documentation>Information to identify a specific version of a file.</xs:documentation>
+      <xs:documentation>Information to identify a specific version of an (XML) file.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
       <xs:element name="path" type="xs:string">
@@ -94,19 +129,12 @@
       <xs:documentation>Information to identyfing the source file. It supports mechanism to distinguish different versions of a source file.</xs:documentation>
     </xs:annotation>
     <xs:sequence>
-      <xs:element name="fileName" type="xs:anyURI"/>
-      <xs:choice minOccurs="0">
-        <xs:element name="identification" type="FileIdentification" maxOccurs="unbounded">
-          <xs:annotation>
-            <xs:documentation>Identification by one or more elements or attributes in the source file.</xs:documentation>
-          </xs:annotation>
-        </xs:element>
-        <xs:element name="sha1Hash" type="xs:hexBinary">
-          <xs:annotation>
-            <xs:documentation>Identification by SHA1 Hash.</xs:documentation>
-          </xs:annotation>
-        </xs:element>
-      </xs:choice>
+      <xs:element name="resourceIdentifier" type="xs:anyURI"/>
+      <xs:element name="identification" type="ResourceIdentification" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>Identification by one or more elements or attributes in the source file.</xs:documentation>
+        </xs:annotation>
+      </xs:element>
     </xs:sequence>
   </xs:complexType>
 
@@ -141,7 +169,7 @@
 
   <xs:element name="translationPackage" type="TranslationPackageType">
     <xs:annotation>
-      <xs:documentation>The root element of an translation file.</xs:documentation>
+      <xs:documentation>The root element of a translation file.</xs:documentation>
     </xs:annotation>
   </xs:element>
 
